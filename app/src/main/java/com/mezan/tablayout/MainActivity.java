@@ -16,9 +16,19 @@ public class MainActivity extends AppCompatActivity {
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Home"));
-        tabLayout.addTab(tabLayout.newTab().setText("Sport"));
-        tabLayout.addTab(tabLayout.newTab().setText("Movie"));
+        tabLayout.addTab(tabLayout.newTab().setText("Appetizer"));
+        tabLayout.addTab(tabLayout.newTab().setText("Salad"));
+        tabLayout.addTab(tabLayout.newTab().setText("Pasta"));
+        tabLayout.addTab(tabLayout.newTab().setText("Pizza"));
+        tabLayout.addTab(tabLayout.newTab().setText("Burger"));
+        tabLayout.addTab(tabLayout.newTab().setText("Chicken"));
+        tabLayout.addTab(tabLayout.newTab().setText("Beef"));
+        tabLayout.addTab(tabLayout.newTab().setText("Vegetable"));
+        tabLayout.addTab(tabLayout.newTab().setText("Rice"));
+        tabLayout.addTab(tabLayout.newTab().setText("Set Menu"));
+        tabLayout.addTab(tabLayout.newTab().setText("Soup"));
+        tabLayout.addTab(tabLayout.newTab().setText("Drinks"));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final MyAdapter adapter = new MyAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());

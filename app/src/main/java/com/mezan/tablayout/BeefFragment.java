@@ -1,5 +1,7 @@
 package com.mezan.tablayout;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,15 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class MovieFragment extends Fragment {
+
+public class BeefFragment extends Fragment {
 
     String []name;
     String []description;
     String []price;
-
-    //Pasta
-
-    public MovieFragment() {
+    public BeefFragment() {
         // Required empty public constructor
     }
 
@@ -23,19 +23,20 @@ public class MovieFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_movie, container, false);
+        View view = inflater.inflate(R.layout.fragment_beef, container, false);
 
         ListView appetizerList;
-        appetizerList = view.findViewById(R.id.pastaList);
+        appetizerList = view.findViewById(R.id.beefList);
 
-        name = getResources().getStringArray(R.array.PASTA);
-        description = getResources().getStringArray(R.array.PASTA_description);
-        price = getResources().getStringArray(R.array.PASTA_price);
+        name = getResources().getStringArray(R.array.BEEF);
+        description = getResources().getStringArray(R.array.BEEF_description);
+        price = getResources().getStringArray(R.array.BEEF_price);
 
         ListAdapter adapter = new ListAdapter(getContext(),name,description,price);
         appetizerList.setAdapter(adapter);
 
         return view;
     }
+
 
 }
